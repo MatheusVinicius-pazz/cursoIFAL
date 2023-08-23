@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPTU</title>
+</head>
+<body>
+    <h1>IPTU - PREFEITURA DE RIO LARGO</h1>
+    <form action="">
+    <p>Qual o valor do seu IPTU? <input type="text" name="iptu" id=""> <input type="submit" value="Calcular opções"></p>
+    </form>
+    <h3></h3>
+    <script>
+        const frm = document.querySelector("form")
+        const res = document.querySelector("h3")
+
+        frm.addEventListener("submit", (e)=>{
+            e.preventDefault()
+            const iptu = Number(frm.iptu.value)
+            const vDiscount = iptu*0.20
+            const discount = iptu - vDiscount
+            const portion = iptu/8
+            res.innerText = 'O valor do desconto de 20% é: R$' + discount + ' e parcelado fica 8x de: R$ ' + portion
+        })
+    </script>
+</body>
+</html>

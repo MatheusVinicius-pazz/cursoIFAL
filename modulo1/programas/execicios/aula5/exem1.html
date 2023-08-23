@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculadora Express</h1>
+    <form action="">
+        <p>
+        Quantas centenas: <input type="text" name="centenas" id=""> <input type="submit" value="Calcular">
+        </p>
+    </form>
+    <pre></pre>
+    <script>
+        const formulario = document.querySelector("form")
+        const respCalc = document.querySelector("pre")
+
+        formulario.addEventListener("submit", (e)=>{
+            e.preventDefault()
+            const cent = Number(formulario.centenas.value)
+            const centena = cent*100
+            const bandejas = centena/12
+            const restOvos = centena%12
+            
+            respCalc.innerText = `Para ${centena} ovos será preciso ${Math.floor(bandejas)} bandejas e sobram ${restOvos} ovos. `
+        })
+    </script>
+</body>
+</html>

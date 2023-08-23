@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de pontos</title>
+</head>
+<body>
+    <h1>Calculdora de pontos corridos</h1>
+<form>
+    <p>
+        Nome do time: <input type="text" name="inNome" id="">
+    </p>
+    <p>
+        Quantidade de vitórias: <input type="text" name="inVitorias" id="">
+    </p>
+    <p>
+        Quantidade de empates: <input type="text" name="inEmpates" id="">
+    </p>
+    <p>
+        <input type="submit" value="Calcular pontuação">
+    </p>
+</form>
+<pre>
+
+</pre>
+<script>
+    const frm = document.querySelector("form")
+    const resp = document.querySelector("pre")
+
+    frm.addEventListener("submit", (e)=>{
+        e.preventDefault()
+
+        const nome = frm.inNome.value
+        const vitoria = Number(frm.inVitorias.value)
+        const empate = Number(frm.inEmpates.value)
+
+        const pontos = (vitoria*3)+(empate*1)
+
+
+        resp.innerText = `O time do ${nome} tem ${pontos} pontos.`
+    })
+</script>
+</body>
+</html>

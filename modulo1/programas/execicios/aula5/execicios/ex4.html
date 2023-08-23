@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máquina de Café</title>
+    <h1>Máquina de Café Malandra</h1>
+
+    <form action="">
+        <p>
+            nome: <input type="text" name="inNome" id="">
+        </p>
+        <p>
+            Valor à pagar: <input type="text" name="inMoney" id="">
+        </p>
+        <p><input type="submit" value="Fazer Café"></p>
+    </form>
+    <pre>
+
+    </pre>
+    <script>
+        const formulario = document.querySelector("form")
+        const resp = document.querySelector("pre")
+
+        formulario.addEventListener("submit", (e)=>{
+            e.preventDefault()
+
+            const nome = formulario.inNome.value
+            const money = formulario.inMoney.value
+
+            const quantCafe = money / 7
+            const troco = money%7 
+
+            resp.innerText = `Bom dia${nome}, você receberá ${Math.floor(quantCafe)} cafés e perderá um troco de R$${troco.toFixed(2)}.`
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

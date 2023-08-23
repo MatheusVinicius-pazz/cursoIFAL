@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculando o quadrado</h1>
+    <form action="">
+        <p>Digite um número: <input type="text" name="inNumber" id=""> <input type="submit" value="Calcular"></p>
+
+    </form>
+    <h3></h3>
+    <script>
+        const frm = document.querySelector("form")
+        const res = document.querySelector("h3")
+
+        frm.addEventListener("submit", (e) => {
+            e.preventDefault()
+            const inNumber = Number(frm.inNumber.value)
+            const quadrado = inNumber*inNumber 
+            res.innerText = 'Resultado: ' + quadrado
+
+        })
+    </script>
+</body>
+</html>

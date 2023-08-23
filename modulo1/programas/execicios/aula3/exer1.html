@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="">
+    <p>Nota 1: <input type="text" name="nota1" id=""></p>
+    <p>Nota 2: <input type="text" name="nota2" id=""></p>
+    <input type="submit" value="Obter média">
+</form>
+<h3></h3>
+
+    <script>
+        const frm = document.querySelector("form")
+        const res = document.querySelector("h3")
+
+        frm.addEventListener("submit", (e)=>{
+            e.preventDefault()
+            const n1 = Number(frm.nota1.value)
+            const n2 = Number(frm.nota2.value)
+            const media = (n1+n2)/2
+            res.innerText = "A média do aluno(a): " + media
+        })
+    </script>
+</body>
+</html>
