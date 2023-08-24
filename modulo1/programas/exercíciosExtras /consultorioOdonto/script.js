@@ -1,6 +1,8 @@
 
 const formulario = document.querySelector("form")
 const listaDeAtendimento = document.querySelector("pre")
+const atendimento = document.querySelector("h2")
+
 
 
 
@@ -20,6 +22,14 @@ formulario.addEventListener("submit", (e)=>{
 
     listaDeAtendimento.innerText = lista
     
+})
+
+    document.querySelector("#urgencia").addEventListener("click", ()=>{
+        atendimento.innerText = 'urgente'
+    })
+    document.querySelector("#atender").addEventListener("click", ()=>{
+
+    atendimento.innerText = "Em atendimento: "
 })
 
 
