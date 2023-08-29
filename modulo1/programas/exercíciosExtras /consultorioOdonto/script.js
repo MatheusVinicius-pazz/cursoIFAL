@@ -25,7 +25,11 @@ formulario.addEventListener("submit", (e)=>{
 })
 
     document.querySelector("#urgencia").addEventListener("click", ()=>{
-        atendimento.innerText = 'urgente'
+        const nomePaciente = formulario.paciente.value
+        listaDePacientes.unshift(nomePaciente)
+        let lista = ''
+        listaDePacientes.forEach((item, i)=> lista += `${i+1}. ${item}\n`)
+        listaDeAtendimento.innerText = lista
     })
     document.querySelector("#atender").addEventListener("click", ()=>{
 
