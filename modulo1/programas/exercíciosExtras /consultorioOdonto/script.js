@@ -3,10 +3,6 @@ const formulario = document.querySelector("form")
 const listaDeAtendimento = document.querySelector("pre")
 const atendimento = document.querySelector("h2")
 
-
-
-
-
 const listaDePacientes = []
 
 formulario.addEventListener("submit", (e)=>{
@@ -24,6 +20,7 @@ formulario.addEventListener("submit", (e)=>{
     
 })
 
+
     document.querySelector("#urgencia").addEventListener("click", ()=>{
         const nomePaciente = formulario.paciente.value
         listaDePacientes.unshift(nomePaciente)
@@ -36,6 +33,10 @@ formulario.addEventListener("submit", (e)=>{
     atendimento.innerText = "Em atendimento: "
 })
 
+
+formulario.addEventListener("click", ()=>{
+
+})
 
 
 
