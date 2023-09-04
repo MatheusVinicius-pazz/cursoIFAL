@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positivo ou Negativo</title>
+</head>
+<body>
+
+    <form action="">
+        <p>
+            Digite um número: <input type="text" name="inNumero" id=""> <input type="submit" value="Calcular">
+        </p>
+    </form>
+    <pre></pre>
+    <script>
+        const frm = document.querySelector("form")
+        const resp = document.querySelector("pre")
+        frm.addEventListener("submit", (e)=>{
+            e.preventDefault()
+            const num = Number(frm.inNumero.value)
+            if(num>=0){
+                resp.innerText = "Positivo"
+
+            }else{
+                resp.innerText = "Negativo"
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Gratuidade no busão</h1>
+    <form action="">
+        <p>
+            Idade: <input type="text" name="inIdade" id="" required>
+        </p>
+        <p>
+            <input type="submit" value="Mostrar">
+        </p>
+    </form>
+    <h3></h3>
+    <script>
+        const frm = document.querySelector("form")
+        const resp = document.querySelector("h3")
+
+        frm.addEventListener("submit", (e)=>{
+            e.preventDefault()
+            
+            const idade = Number(frm.inIdade.value)
+
+            if(idade>=60){
+                resp.innerText = "Gratuito"
+            }else{
+                resp.innerText = "Pagante"
+
+            }
+        })
+    </script>
+</body>
+</html>
