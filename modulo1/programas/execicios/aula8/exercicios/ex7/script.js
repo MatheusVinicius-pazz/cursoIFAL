@@ -8,6 +8,15 @@ frm.addEventListener("submit", (e)=>{
   const temporario = frm.inTemporario.checked
   const efetivo = frm.inEfetivo.checked
 
-  console.log(salarioAtual)
-  console.log(efetivo)
+  let salarioNovo 
+  if(estagio==true){
+    salarioNovo = salarioAtual*1.05
+    resp.innerText = `Seu novo salário será: R$ ${salarioNovo.toFixed(2)}`
+  }else if(temporario==true){
+    salarioNovo = salarioAtual*1.08
+    resp.innerText = `Seu novo salário será: R$ ${salarioNovo.toFixed(2)}`
+  } else if(efetivo==true){
+    salarioNovo = salarioAtual*1.15
+    resp.innerText = `Seu novo salário será: R$ ${salarioNovo.toFixed(2)}`
+  }
 })
