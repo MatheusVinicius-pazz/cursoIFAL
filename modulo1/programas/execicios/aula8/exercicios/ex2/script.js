@@ -21,9 +21,13 @@ frm.addEventListener("submit", (e)=>{
         resp.innerText = `Novo salário: R$${salarioNovo.toFixed(2)}\nPercentual de aumento de 7%.`
     } else if(salarioAtual<= 1600 && salarioAtual>1000){
         salarioNovo = salarioAtual*1.03
-        resp.innerText = `Novo salário: R$${salarioNovo.toFixed(2)}\nPercentual de aumento de 7%.`
+        resp.innerText = `Novo salário: R$${salarioNovo.toFixed(2)}\nPercentual de aumento de 3%.`
     } else{
         resp.innerText = "Sem aumento."
     }
 
+})
+
+frm.addEventListener("reset", ()=>{
+    resp.innerText = ''
 })
