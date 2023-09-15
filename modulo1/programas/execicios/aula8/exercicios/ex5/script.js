@@ -4,8 +4,10 @@ const resp = document.querySelector("h3")
 
 let excesso = (v_carro/v_max-1)*100
 
-if(excesso <=20){
-    resp.innerText = `O motorista excedeu ${Math.round(excesso)}% da velocidade máxima permitida, multa de R$ 85,13 e perda de 4 pontos na carteira.`
+if(excesso<=0){
+alert('O motorista não excedeu a velocidade.')
+}else if(excesso <=20){
+    resp.innerText= `O motorista excedeu ${Math.round(excesso)}% da velocidade máxima permitida, multa de R$ 85,13 e perda de 4 pontos na carteira.`
 }else if(excesso>20 && excesso<=50){
     resp.innerText = `O motorista excedeu ${Math.round(excesso)}% da velocidade máxima permitida, multa de R$ 127,69 e perda de 5 pontos na carteira.`
 }else{

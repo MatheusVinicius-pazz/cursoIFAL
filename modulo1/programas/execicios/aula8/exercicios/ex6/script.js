@@ -7,10 +7,16 @@ const resp4 = document.querySelector("#resp04")
 
 frm.addEventListener("submit", (e)=>{
     e.preventDefault()
+    resp1.innerText = ``
+    resp2.innerText = ``
+    resp3.innerText = ``
+    resp4.innerText = ``
+    
     const saque = Number(frm.inSaque.value)
     if(saque%5 != 0){
         alert("Valor inválido para saque!")
         frm.inSaque.focus()
+        frm.inSaque.value = ''
     return
     }
 
@@ -21,7 +27,7 @@ frm.addEventListener("submit", (e)=>{
     const notasVinte = Math.floor(resto/20) 
     resto = resto%20
     const notasCinco = Math.floor(resto/5)
-    
+
     
     if(notasDuzentos>0){
         resp1.innerText = `Notas de R$ 200: ${notasDuzentos}`  
