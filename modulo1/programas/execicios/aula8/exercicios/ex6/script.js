@@ -14,7 +14,7 @@ frm.addEventListener("submit", (e)=>{
     
     const saque = Number(frm.inSaque.value)
     if(saque%5 != 0){
-        alert("Valor inválido para saque!")
+        alert("Valor inválido para realizar o saque!")
         frm.inSaque.focus()
         frm.inSaque.value = ''
     return
