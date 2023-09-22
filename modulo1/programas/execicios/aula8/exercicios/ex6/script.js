@@ -31,16 +31,24 @@ frm.addEventListener("submit", (e)=>{
     
     if(notasDuzentos>0){
         resp1.innerText = `Notas de R$ 200: ${notasDuzentos}`  
+    }else{
+        resp1.innerText = ``
     }
     if(notasCinquenta>0){
         resp2.innerText = `Notas de R$ 50: ${notasCinquenta}`
+    }else{
+        resp2.innerText = ``
     }
     if(notasVinte>0){
         resp3.innerText = `Notas de R$ 20: ${notasVinte}`
+    }else{
+        resp3.innerText = ``
     }
     if(notasCinco>0){
         resp4.innerText = `Notas de R$ 5: ${notasCinco}`
+    }else{
+        resp4.innerText = ``
     }
- 
+    
 
 })
