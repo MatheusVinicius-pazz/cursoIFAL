@@ -10,21 +10,24 @@
     <script>
         
         let i = 0
-        let n = 1
-        let media = 0
+        let n, media
+        let soma = 0
         
         while(n != 0){
             
              n = Number(prompt("Digite o número:")) 
-             media = media + n
+             soma = soma + n
             
             i++
             
             
         }
-        
-        document.write(`Média: ${media/(i-1).toFixed(2)}.<br>`)
+        media = soma / i
+        document.write(`Média: ${media.toFixed(2)}.<br>`)
         
     </script>
+
+        
+
 </body>
 </html>
