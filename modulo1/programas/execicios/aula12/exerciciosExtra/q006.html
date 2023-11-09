@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 6</title>
+
+</head>
+<body>
+    <form action="">
+        <h1>Calculadora de rendimentos</h1>
+    <p>
+        Capital Inicial(R$): <input type="text" name="inCapitalInicial" id="">
+
+    </p>
+    <p>
+        Taxa de juros: <input type="text" name="inJuros" id="">
+    </p>
+    <p>
+        Nº de meses: <input type="text" name="inMeses" id="">
+    </p>
+    <p>
+        <input type="submit" value="Calcular">
+    </p>
+    </form>
+    <h1 id="resp01"></h1>
+    <pre id="resp02"></pre>
+    <script>
+        const frm = document.querySelector("form")
+        const resp01 = document.querySelector("#resp01")
+        const resp02 = document.querySelector("#resp02")
+
+        frm.addEventListener("submit", (e)=>{
+            e.preventDefault()
+            resp01.innerText = 'Capital final:'
+
+            let taxaDeJuros = Number(frm.inJuros.value)
+            let capitalInicial = Number(frm.inCapitalInicial.value)
+            let quantidadeDeMeses = Number(frm.inMeses.value)
+            
+            let resultado = ''
+            for(let i = 1; i<=quantidadeDeMeses; i++){
+                capitalInicial=capitalInicial*(1+taxaDeJuros/100)
+                resultado = resultado + `${i}: ${capitalInicial.toFixed(2)}\n`
+                
+            }
+            resp02.innerText = resultado
+
+        })
+        
+
+        frm
+    </script>
+</body>
+</html>

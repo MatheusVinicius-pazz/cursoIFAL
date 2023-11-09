@@ -1,4 +1,4 @@
-<script>
+
 let numAl, media
 let i = 1
 let soma = 0
@@ -11,4 +11,4 @@ i++
 document.write(`Soma: ${soma}<br>`)
 media = soma/i
 document.write(`Média: ${media.toFixed(2)}`)
-</script>
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 4</title>
+</head>
+<body>
+    <h1>Soma dos primos</h1>
+    <form>
+        <p>
+            N: <input type="text" name="inNumero" id="">
+        </p>
+        <p>
+            <input type="submit" value="Somar">
+        </p>
+        <pre id="resp01"></pre>
+        <pre id="resp02"></pre>
+        <pre id="resp03"></pre>
+
+
+    </form>
+    <script>
+        const frm = document.querySelector("form")
+        const resp01 = document.querySelector("#resp01")
+        const resp02 = document.querySelector("#resp02")
+        const resp03 = document.querySelector("#resp03")
+
+        frm.addEventListener("submit", (e) => {
+    e.preventDefault()
+
+    let numero = Number(frm.inNumero.value)
+
+    if (isNaN(numero)) {
+      alert("Número inválido!")
+      frm.inNumero.focus()
+      return
+    }
+
+    resp01.innerText = `Divisores de 1 à ${numero}:\n`
+    let resultado = ''
+    let soma = 0
+    for (let j = 1; j <= numero; j++) {
+      let contadora = 0
+      
+
+      for (let i = 1; i <= j; i++) {
+        if (j % i === 0) {
+          contadora++
+        
+        }
+      }
+
+      if (contadora === 2) {
+        soma = soma + j
+        resultado += j + "\n"
+      }
+    }
+
+    resp02.innerText = resultado
+    resp03.innerText = `Soma: ${soma}`
+    
+  })
+</script>
+</body>
+</html>
