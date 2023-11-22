@@ -1,82 +1,80 @@
-
 const frm = document.querySelector("form")
-const listaDeatendimento = document.querySelector("pre")
+const listaDeatendimentoNormal = document.querySelector("#atdNormal")
+const atendimentoPreferencial = document.querySelector("#atdPreferencial")
 const atendimento = document.querySelector("span")
-const btnUrgencia = document.querySelector("#btUrgencia")
-const btAtender = document.querySelector("#btAtender")
 
-    let pacientes = []
-    frm.addEventListener("submit", (e)=>{
-    e.preventDefault()
+let pacientes = [];
+
+
+frm.addEventListener("submit", (e) => {
+    e.preventDefault();
     let nome = frm.inPaciente.value
-    frm.inPaciente.focus()
-    pacientes.push(nome)
-
-    let lista = ''
+    let idade = Number(frm.inIdade.value)
+    frm.inPaciente.focus();
+    pacientes.push({ nome, idade})
     
-    //pacientes.forEach((item, i) => lista = lista + `${i+1}. ${item}\n`)
-    for(let i=0; i<pacientes.length; i++){
-        
-       lista = lista + (i+1)+ '. ' + pacientes[i] + '\n'
-   }
+    
 
-    listaDeatendimento.innerText= lista
+
+    let lista = '';
+    for (let i = 0; i < pacientes.length; i++) {
+        lista = lista + (i + 1) + '. ' + pacientes[i].nome + " - " + pacientes[i].idade + " anos" + '\n'
+    }
+
+    listaDeatendimentoNormal.innerText = lista
     frm.inPaciente.value = ''
+    frm.inIdade.value = ''
+});
 
-})
+frm.btSeparar.addEventListener("click", () => {
+    let listaNormal = 'Lista normal: \n '
+    let listaPre = 'Lista Preferencial: \n'
+    let m = 1
 
-    btnUrgencia.addEventListener("click", ()=>{
-    
-    frm.inPaciente.focus()
-    let nome = frm.inPaciente.value
-    frm.inPaciente.focus()
-    pacientes.unshift(nome)
 
-    let lista = ''
-    
-   
-    for(let i=0; i<pacientes.length; i++){
-        
-       lista = lista + (i+1)+ '. ' + pacientes[i] + '\n'
-   }
 
-    listaDeatendimento.innerText= lista
-    frm.inPaciente.value = ''
-})
+    for (let i = 0; i < pacientes.length; i++) {
+        if(pacientes[i].idade < 60) {
+            listaNormal = listaNormal + (m) + '. ' + pacientes[i].nome + " - " + pacientes[i].idade + " anos" + '\n'
 
-    btAtender.addEventListener("click", ()=>{
-        if(pacientes.length == 0){
-            alert("Lista vazia!")
-            frm.inPaciente.focus()
-            return
+            m++
         }
-   
-    
-    let nome = frm.inPaciente.value
-    frm.inPaciente.focus()
-   
-    
-    let proximo = pacientes.shift()
-    
-
-    let lista = ''
-    
-   
-    for(let i=0; i<pacientes.length; i++){
         
-       lista = lista + (i+1)+ '. ' + pacientes[i] + '\n'
-   }
-   listaDeatendimento.innerText= lista
-   atendimento.innerText = proximo
-   frm.inPaciente.focus()
+    }
+    let n = 1
     
+    for (let j = 0; j < pacientes.length; j++){
+        if(pacientes[j].idade >=60) {
+        
+            listaPre = listaPre +(n) + '. ' + pacientes[j].nome + " - " + pacientes[j].idade + " anos" + '\n'
+            
+            n++
+        }
+    }
+
+    
+    listaDeatendimentoNormal.innerText = listaNormal
+    atendimentoPreferencial.innerText = listaPre
+
+    
+});
+
+
+
+
+
+frm.btAtender.addEventListener("click", () => {
+    let proximo = ''
+    let paciente = 0
+    for(let i = 0; i<pacientes.length; i++){
+        if(pacientes[i].idade>=60){
+            paciente = i
+            break
+        }
+    }
+console.log(pacientes)
+
+    atendimento.innerText = pacientes[paciente].nome
+    pacientes.splice(paciente,1)
 })
-
-
-
-
-
-
-
-
 

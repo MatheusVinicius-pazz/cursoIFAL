@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<style>
+    h1 {border-bottom-style: inset;}
+    pre {font-size: 1.2em;}
+</style>
+
+<body>
+    <h1>Atividade sobre vetores</h1>
+    <h2>Vetor [<span id="outVetor"></span>] </h2>
+
+    <form>
+        <p>Click para adicionar novo ano ao <input type="submit" value="INÍCIO"></p>
+        <p>Click para adicionar novo ano ao <input type="button" id="btFinal" value="FINAL"></p>
+        <p>Procurar índice do               <input type="button" id="btAno"   value="ANO"></p>
+    </form>
+
+    <h3></h3>
+
+    <script>
+        const frm = document.querySelector("form")
+        const respVetor = document.querySelector("#outVetor")
+        const respPesquisa = document.querySelector("h3")
+
+        const anos = []
+        let verificacao
+
+        frm.addEventListener("submit", (e) => {
+            e.preventDefault()
+
+            
+            let inAno = Number(prompt("Digite o ano:"))
+            anos.unshift(inAno)
+            respVetor.innerText = anos.join("-")
+
+        })
+
+        frm.btFinal.addEventListener("click", () => {
+            let inAno = Number(prompt("Digite o ano:"))
+            anos.push(inAno)
+            respVetor.innerText = anos.join("-")
+        })
+
+        frm.btAno.addEventListener("click", () => {
+            let inAno = Number(prompt("Digite o ano:"))
+            if(anos.includes(inAno)==true){
+                alert('O ano está presente na lista.')
+            }else{
+                alert('O ano não está presente na lista.')
+            }
+            
+        })
+
+    </script>
+</body>
+
+</html>

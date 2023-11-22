@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Programa Criptografia</h1>
+    <form action="">
+        <p>
+            Mensagem: <input type="text" name="inMsg" id="">
+        </p>
+        <p>
+            <input type="submit" value="Criptografar">
+            <input type="button" value="Descriptografar">
+        </p>
+        <h3></h3>
+        <script>
+           const frm = document.querySelector("form")
+           const res = document.querySelector("h3")
+
+           frm.addEventListener("submit", (e)=>{
+            e.preventDefault()
+
+            let msg = frm.inMsg.value
+
+            let letrasImpares = ''
+            let letrasPares = ''
+
+          
+            for(let i = 0; i<msg.length; i++){
+                
+                if(i%2==0){
+                    letrasPares += msg[i]
+                }else{
+                    letrasImpares += msg[i]
+                }
+            
+        }
+
+            res.innerText =  letrasImpares + letrasPares
+
+           })
+           
+
+
+
+
+
+
+
+
+        </script>
+    </form>
+</body>
+</html>
