@@ -1,0 +1,14 @@
+<script>
+let nome = prompt("Digite seu nome completo:")
+let tam = nome.length
+
+let x = 0
+let letra = prompt("Digite a letra que deseja pesquisar:")
+for(let i = 0; i<tam;i++){
+if(nome.charAt(i) == letra){
+x++
+}
+}
+document.write(" o nome: " + nome + ", possuí " + x + " letras.")
+
+</script>
