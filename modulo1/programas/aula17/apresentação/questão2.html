@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculadora de vencimentos</h1>
+    <form action="">
+        <p>Data de Vencimento: <input type="date" name="inData" id=""></p>
+        <p>Valor da fatura: <input type="text" name="inValor" id=""></p>
+        <p>
+            Juros: <input type="number" name="outJuros" id="">
+        </p>
+        <p>
+            Multa: <input type="number" name="outMulta" id=""> 
+        </p>
+        <p>
+            Total:<input type="number" name="outTotal" id="">
+            
+        </p>
+        <p>
+            <input type="submit" value="Calcular Multa">
+            <input type="button" value="Nova Consulta">
+        
+        </p>
+    </form>
+
+    <script>
+        const frm = document.querySelector("form")
+        
+        frm.addEventListener("submit", (e)=>{
+            e.preventDefault()
+
+            let taxa_multa = 2/100
+            let taxa_juros = 0.33/100
+
+          let dataVenc = frm.inData.value
+          let valor = Number(frm.inValor.value)
+          let hoje = new Date()
+          let venc = new Date()
+
+          let partes = dataVenc.split("-")
+           
+          venc.setDate(Number(partes[2]))
+          venc.setMonth(Number(partes[1]-1))
+          venc.setFullYear(Number(partes[0]))
+
+
+          let diasEmAtraso = hoje - venc
+
+          let multa = 0
+          let juros = 0 
+        
+          if(diasEmAtraso > 0){
+            const dias = diasEmAtraso / 86400000
+            multa = valor * taxa_multa
+            juros = valor * taxa_juros * dias
+            
+          }
+          const total = valor + multa + juros 
+
+          frm.outMulta.value = multa.toFixed(2)
+          frm.outJuros.value = juros.toFixed(2)
+          frm.outTotal.value = total.toFixed(2)
+
+        })
+    </script>
+</body>
+</html>
