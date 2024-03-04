@@ -1,0 +1,28 @@
+.barra-superior{
+    
+    
+    display: flex;
+    justify-content: space-between;
+}
+.barra-de-busca{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    
+
+}
+.barra-de-acoes{
+    
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    
+    
+}
+
+
+img{
+    height: 50px;
+}
