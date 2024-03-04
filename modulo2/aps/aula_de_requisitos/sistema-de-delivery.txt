@@ -1,0 +1,22 @@
+Sistema de deleivery 
+
+-ATORES-
+-Requisitos funcionais-
+
+Ator 1: 
+1 - Eu como cliente desejo realizar um pedido de entrega para um produto do catalógo do estabelecimento
+2 - Eu como cliente quero saber o status do meu pedido.
+3 - Eu como cliente quero cancelar um pedido que ainda não foi atendido.
+4 - Eu como cliente quero a estimativa de tempo para a entrega.
+5- Eu como  cliente quero receber uma mensagem quando o produto estiver saindo para entrega. 
+
+Ator 2: 
+1- Eu como empresa gostaria de ter acesso a alguns dados do usuário, como: nome e endereço, whatsapp.
+3 - Eu como empresa gostaria de fornecer ofertas exclusivas para os clientes fieis.
+4 - Eu como empresa gostaria de receber feedbacks dos clientes. 
+
+Ator 3: Entregador
+
+1- com entregador eu quero ter acesso as  informações do cliente para poder entregar corretamente o produto.
+2- Como entregador ter comunicação aberta entre mim e o cliente para resolver qualquer problema ou duvida que ele possa ter sobre a entrega.
+3 - Gostaria de  saber se o cliente está satisfeito ou não com a entrega.

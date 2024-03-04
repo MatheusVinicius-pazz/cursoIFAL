@@ -1,0 +1,19 @@
+Academia
+
+Ator 1: aluno
+
+Eu como aluno quero agendar teste de uma semana para conhecer a academia;
+Eu como aluno quero ter acesso ao o esquema de treinos montado pelo personal.
+Eu como aluno quero ter acesso a uma loja com produtos para musculação
+Eu como aluno quero um sistema de pagamento online
+
+Ator 2: Personal 
+Eu como personal quero ter acesso e adicionar alguns dados do Cliente como: nome, idade, peso, altura, percentual de gordura, se possui alguma doença crônica. 
+Eu como personal quero montar um esquema de treino para o cliente de acordo com as caracteristicas do aluno.
+Eu como personal quero um quadro de escalas 
+
+Ator 3: Atendente 
+Eu como atendente quero um chat para comunicação com os alunos
+Eu como antendente quero modificar e acessar os dados dos usuários 
+Eu como atendente quero um cadastro de avisos 
+Eu como atendente quero ter acesso a um quadro de escala dos personal treinrs

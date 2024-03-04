@@ -1,0 +1,33 @@
+
+Requisitos Funcionais {funções que o sistema nos oferece}
+Requisitos não funcionais {Segurança, desempenho, usabilidade, mult So}
+Ator: Utilizador 
+
+
+
+Lizu - Sistema de gerenciamento financeiro.
+
+1-Como usuário comum eu gostaria de armazenar minhas despesas 
+
+2-Como usuário comum eu gostaria de armazenar minhas receitas
+
+3-Como usuário comum eu gostaria acessar dicas de gestão financeira
+
+4-Como usuário comum eu gostaria ter acesso a uma calculadora financeira
+
+5- Como usuário comum eu gostaria que o app separa-se depesas das 
+pessoas que emprestei o cartão de crédito.
+
+
+1- Como empresa eu gostaria que eu tivesse uma lista de todos clientes devedores
+
+2- Como empresa eu gostaria  de saber como está o saldo dos meus devedores
+
+3- Como empresa eu gostaria  de enviar um lembrete para o cliente ABC sobre seu pagamento atrasado
+
+4 - Como empresa eu quero ter acesso as informações dos meus funcionários e seus rendimentos
+
+5 - Como empresa eu gostaria de ter acesso a um relatório mensal detalhado dos lucros e prejuízos da minha empresa.
+
+6-Como administrador do sistema, eu quero poder adicionar novos clientes   
+

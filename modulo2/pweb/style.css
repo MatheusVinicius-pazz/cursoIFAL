@@ -1,0 +1,27 @@
+body{
+    background-color: #212121;
+    color: black;
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+h1{
+    font-size: 35px;
+    color: greenyellow;
+    border: black;
+}
+
+span{
+    color: black;
+}
+div{
+    background-color: white;
+    border: black;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    border-radius: 15px;
+    margin-left: 25%;
+    margin-top: 10%;
+    text-align: center;
+}

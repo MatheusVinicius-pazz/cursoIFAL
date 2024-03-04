@@ -1,0 +1,36 @@
+
+CLINICA VEterinária
+
+Ator 1: Tutores dos Pets
+
+1. Eu como tutor quero ter acesso a um catalogo de serviços oferecidos pela clínica;
+2. Eu como tutor que realizar agedamentos de consultas e serviços para meus pets;
+3. Eu como tutor quero ter aceso a uma loja para comprar acesórios, brinquedos e medicamentos para os pets
+4. Eu como tutor quero ter um chat para reclamações
+
+Ator 2: veterinário 
+
+1. Eu como veterinário quero ter acesso a lista de pacientes agendados;
+2. Eu com veterinário quero crar um prontuário para adicionar informações sobre p tratramento dos pets
+3. Eu como veterinário quero ter acesso a alguns dados dos tutures 
+4. Eu como veterinário quero poder sugerir medicamentos para a loja 
+
+Ator 3: Banhista 
+
+1. Eu como banhista quero ter acesso ao prontuário dos pets
+2. Eu como banhista quero ter a lista filtrada de todos os agendamentos para banho;
+3. Eu como banhista quero ter acesso a contato dos tutores para informar o horário de saída.
+
+Ator 4: tosador
+
+Eu como tosador que ter acesso ao prontuário com recomendações fornecido pelo veterinário 
+Eu como tosador que ter acesso a recomendações feitas pelo tutor do pet
+Eu como tosador que ter contato com os clientes
+Eu como tosador queroo ter acesso a uma lista filtrada com os agendamentos para tosa
+
+
+Ator 5: empresário
+1. Eu como empresa quero ter acesso a informações dos atendimentos de todos os funcionários da clínica;
+2. Eu como empresa quero ter acesso a quantidades de produtos disponíveis na loja;
+3. Eu como empresa quero ter acesso ao estoque de medicamentos disponiveis para o tratamento e saidas e entradas.
+4. Eu como empresa 
