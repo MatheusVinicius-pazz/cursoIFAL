@@ -3,12 +3,14 @@
     
     display: flex;
     justify-content: space-between;
+    border-bottom: solid 1px #c9c6c6;
+    padding: 10px;
 }
 .barra-de-busca{
     width: fit-content;
     display: flex;
     align-items: center;
-    
+    gap: 16px;
     
 
 }
@@ -31,9 +33,9 @@ img{
 
 .bt-primario{
 font-size: medium;
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-background-color: #999797;
-color: #fff;
+
+background-color: #2f2f2f;
+color: rgb(243, 243, 243);
 border: none;
 border-radius: 20px;
 padding: 15px;
@@ -43,9 +45,10 @@ padding: 15px;
 
 .bt-secundario{
     font-size: medium;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: #999797;
-    color: #fff;
+    
+    
+    color: #636161;
+    background-color: white;
     border: none;
     border-radius: 20px;
     padding: 15px;
@@ -53,22 +56,22 @@ padding: 15px;
     
         .bt-terciario{
             font-size: medium;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            background-color: #999797;
-            color: #fff;
+            
+            background-color: white;
+            color: #636161;
             border: none;
             border-radius: 20px;
             padding: 15px;
         }
 
         .bt-secundario:hover{
-            background-color: #2f2f2f;
+            background-color: #e6e6e6;
         }
             .bt-primario:hover{
-                background-color: #2f2f2f;
+                background-color: #999797;
                 }
                     .bt-terciario:hover{
-                        background-color: #2f2f2f;
+                        background-color: #e6e6e6;
                     }
 
             .avatar{
@@ -83,4 +86,14 @@ padding: 15px;
             .avatar:hover{
                 filter:brightness(85%);
             }
-           
+           .search{
+            border: none;
+            background-color: #f1f0f0;
+            border-radius: 20px;
+            padding: 15px;
+           }
+
+           .imagem-ifal{
+            border: solid 1px #757272;
+            height: 60px;
+           }
