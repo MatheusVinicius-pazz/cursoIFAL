@@ -1,0 +1,48 @@
+body{
+    background-color: #2f2f2f;
+}
+img{border-radius: 10px;
+}
+
+.musica {
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente */
+    margin-bottom: 20px; /* Espaçamento entre as músicas */
+   gap: 20px;
+    align-items: center;
+    width: 800px;
+    border-radius: 16px;
+    background-color: #111111;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+     color: #888; 
+
+    
+}
+
+.capa {
+    width: 50px; /* Largura da imagem */
+    aspect-ratio: 1; /* Altura da imagem */
+    
+ 
+}
+
+.info {
+    
+    width: 60%;
+}
+
+.titulo {
+    font-weight: bold;
+    margin-bottom: 5px; /* Espaçamento inferior entre o título e os artistas */
+    color: white;
+    
+}
+
+.artistas, .album {
+   /* Cor cinza para os artistas e álbum */
+    margin-bottom: 5px; /* Espaçamento inferior entre os artistas/álbum */
+}
+.album{
+    width: 20%;
+}
